@@ -25,18 +25,18 @@ cd ~/data
 ## cellranger
 ```
 mkdir ~/data/cellranger_results
-/Shared_Software/Single_cell/cellranger-4.0.0/bin/cellranger count \
-	--id Mouse_10x \
-	--fastqs=~/data/ \
-	--sample=filename \
-	--localcores=40 \
-	--localmem=100 \
+/Shared_Software/Single_cell/cellranger-4.0.0/bin/cellranger count 
+	--id Mouse_10x 
+	--fastqs=~/data/ 
+	--sample=filename 
+	--localcores=40 
+	--localmem=100 
 	--transcriptome=/Shared_Software/ref_genome/refdata-gex-mm10-2020-A
   ```
   
 ## velocyto
 ```
-velocyto run10x -m /Shared_Software/ref_genome/mm10_rmsk/mm10_rmsk.gtf \
+velocyto run10x -m /Shared_Software/ref_genome/mm10_rmsk/mm10_rmsk.gtf 
         ~/data/cellranger_results/Mouse_10x
  	/Shared_Software/ref_genome/refdata-gex-mm10-2020-A/genes/genes.gtf
 ```
