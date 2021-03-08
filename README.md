@@ -25,6 +25,7 @@ cd ~/data
 ## cellranger
 ```
 mkdir ~/data/cellranger_results
+cd ~/data/cellranger_results
 /Shared_Software/Single_cell/cellranger-4.0.0/bin/cellranger count 
 	--id Mouse_10x 
 	--fastqs=~/data/ 
