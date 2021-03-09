@@ -8,14 +8,14 @@ tar -vxzf sratoolkit.current-ubuntu64.tar.gz
 ```
 
 ## SRA file to fastq 
-* ### Single end 
+* #### Single end 
 ```
 cd ~/data
 ~/SRAToolkit/sratoolkit.current-ubuntu64/bin/fastq-dump SRR11268104 -O ./filename/ # 结果生成：SRR11268104.fastq
 ~/SRAToolkit/sratoolkit.current-ubuntu64/bin/fastq-dump --fasta SRR11268104 -O ./filename/ #（结果生成：SRR11268104.fasta）
 ```
 
-* ### Pair end 
+* #### Pair end 
 ```
 cd ~/data
 ~/SRAToolkit/sratoolkit.current-ubuntu64/bin/fastq-dump SRR11268104 --split-3 -O ./filename/ # 结果生成：SRR11268104_1.fastq，SRR11268104_2.fastq）
@@ -26,7 +26,7 @@ cd ~/data
 如果结果有两个文件，说明是双端文件并且数据质量比较高(没有低质量的reads或者长度小于20bp的reads)  
 如果结果有三个文件，说明是双端文件，但是有的数据质量不高，存在trim的结果，第三个文件的名字一般是：<srr_id>.fastq， 而且文件也不大，基本可以忽略
 
-* ### --split-files 替代 --split-3
+* #### --split-files 替代 --split-3
 ```
 ~/SRAToolkit/sratoolkit.current-ubuntu64/bin/fastq-dump SRR11268104 --split-files --gzip -O ./filename/
 ```
