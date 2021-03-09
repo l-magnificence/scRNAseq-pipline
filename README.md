@@ -50,12 +50,12 @@ done
 ```
 mkdir ~/data/cellranger_results
 cd ~/data/cellranger_results
-/Shared_Software/Single_cell/cellranger-4.0.0/bin/cellranger count 
-	--id Mouse_10x  
-	--fastqs=~/data/ 
-	--sample=SRR11268104  
-	--localcores=40 
-	--localmem=100 
+/Shared_Software/Single_cell/cellranger-4.0.0/bin/cellranger count \
+	--id Mouse_10x  \
+	--fastqs=~/data/ \
+	--sample=SRR11268104  \
+	--localcores=40 \
+	--localmem=100 \
 	--transcriptome=/Shared_Software/ref_genome/refdata-gex-mm10-2020-A
 ```
 --id：output filename  
@@ -65,10 +65,14 @@ cd ~/data/cellranger_results
 
 ## velocyto
 ```
-velocyto run10x -m /Shared_Software/ref_genome/mm10_rmsk/mm10_rmsk.gtf 
-        ~/data/cellranger_results/Mouse_10x
- 	/Shared_Software/ref_genome/refdata-gex-mm10-2020-A/genes/genes.gtf
+# conda activate velocyto
+velocyto run10x -m /Shared_Software/ref_genome/mm10_rmsk/mm10_rmsk.gtf \
+        ~/data/cellranger_results/Mouse_10x \
+ 	/Shared_Software/ref_genome/refdata-gex-mm10-2020-A/genes/genes.gtf 
 ```
-
+Usage: velocyto run10x -m msk.gtf SAMPLEFOLDER GTFFILE  
+-m msk.gtf: file containing intervals to mask
+SAMPLEFOLDER: this is the folder containing the subfolder: outs, outs/analys and outs/filtered_gene_bc_matrices from cellranger output folders.  
+GTFFILE:  genome annotation file
 
 
