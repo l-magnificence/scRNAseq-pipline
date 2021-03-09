@@ -58,10 +58,10 @@ cd ~/data/cellranger_results
 	--localmem=100 \
 	--transcriptome=/Shared_Software/ref_genome/refdata-gex-mm10-2020-A
 ```
---id：output filename  
---fastqs：path to fastq file  
---sample：fastq.gz文件名当中_S1之前的字段  
---transcriptome：参考基因组
+* **--id**：output filename  
+* **--fastqs**：path to fastq file  
+* **--sample**：fastq.gz文件名当中_S1之前的字段  
+* **--transcriptome**：参考基因组
 
 ## velocyto
 ```
@@ -70,9 +70,9 @@ velocyto run10x -m /Shared_Software/ref_genome/mm10_rmsk/mm10_rmsk.gtf \
         ~/data/cellranger_results/Mouse_10x \
  	/Shared_Software/ref_genome/refdata-gex-mm10-2020-A/genes/genes.gtf 
 ```
-**Usage:** velocyto run10x -m msk.gtf SAMPLEFOLDER GTFFILE  
-**-m msk.gtf:** file containing intervals to mask  
-**SAMPLEFOLDER:** this is the folder containing the subfolder: outs, outs/analys and outs/filtered_gene_bc_matrices from cellranger output folders.  
-**GTFFILE:**  genome annotation file
+* **Usage**: velocyto run10x -m msk.gtf SAMPLEFOLDER GTFFILE  
+* **-m msk.gtf**: file containing intervals to mask  
+* **SAMPLEFOLDER**: this is the folder containing the subfolder: outs, outs/analys and outs/filtered_gene_bc_matrices from cellranger output folders.  
+* **GTFFILE**: genome annotation file
 
 
