@@ -51,14 +51,18 @@ done
 mkdir ~/data/cellranger_results
 cd ~/data/cellranger_results
 /Shared_Software/Single_cell/cellranger-4.0.0/bin/cellranger count 
-	--id Mouse_10x 
+	--id Mouse_10x  
 	--fastqs=~/data/ 
-	--sample=filename 
+	--sample=SRR11268104  
 	--localcores=40 
 	--localmem=100 
 	--transcriptome=/Shared_Software/ref_genome/refdata-gex-mm10-2020-A
-  ```
-  
+```
+--id：output filename  
+--fastqs：path to fastq file  
+--sample：fastq.gz文件名当中_S1之前的字段  
+--transcriptome：参考基因组
+
 ## velocyto
 ```
 velocyto run10x -m /Shared_Software/ref_genome/mm10_rmsk/mm10_rmsk.gtf 
